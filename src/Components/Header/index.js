@@ -4,10 +4,10 @@ function Header() {
         <header>
             <div>
             <Link to="/">Home</Link><br />
-                <Link to="/CadastroCli">CadastroCli</Link><br />
-                <Link to="/SimulaçaodeFinanciamento">Financiamento</Link><br />
-                <Link to="/MovimentaçaoContaCorrente">ContaCorrente</Link><br />
-                <Link to="/Sobrenos">Sobrenos</Link><br />
+                <Link to="/CadastroCliente">CadastroCliente</Link><br />
+                <Link to="/CalculodoFrete">CalculodoFrete</Link><br />
+                <Link to="/Login">Login</Link><br />
+                <Link to="/SobreNos">SobreNos</Link><br />
             </div>
         </header>
     )

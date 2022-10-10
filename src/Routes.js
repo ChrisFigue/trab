@@ -1,19 +1,19 @@
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Home from "./pages/Home";
-import CadastroCli from "./pages/CadastroCli";
-import Financiamento from "./pages/SimulaçaodeFinanciamento";
-import ContaCorrente from "./pages/MovimentaçaoContaCorrente";
-import Sobrenos from "./pages/Sobrenos";
+import CadastroCliente from "./pages/CadastroCliente";
+import CalculodoFrete from "./pages/CalculodoFrete";
+import Login from "./pages/Login";
+import SobreNos from "./pages/SobreNos";
 import Header from "./Components/Header";
 function RoutesApp () {
     return <BrowserRouter>
     <Header/>
         <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/CadastroCli" element={<CadastroCli/>} />
-            <Route path="/SimulaçaodeFinanciamento" element={<Financiamento/>} />
-            <Route path="/MovimentaçaoContaCorrente" element={<ContaCorrente/>} />
-            <Route path="/Sobrenos" element={<Sobrenos/>} />
+            <Route path="/CadastroCliente" element={<CadastroCliente/>} />
+            <Route path="/CalculodoFrete" element={<CalculodoFrete/>} />
+            <Route path="/Login" element={<Login/>} />
+            <Route path="/SobreNos" element={<SobreNos/>} />
         </Routes>
     </BrowserRouter>
 }

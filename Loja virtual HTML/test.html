@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:rgb(44, 41, 44);
+            text-align: center;
+            color: antiquewhite;
+        }
+        .container{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.301);
+            padding: 1em;
+            border-radius: 10px;
+        }
+        button{
+            background-color:rgb(12, 49, 4);
+            color: white;
+            border: none;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 6px 6px 6px black;
+            cursor: pointer;
+        }
+        button:hover{
+          background-color: steelblue;
+        }
+        
+        input{
+            padding: 5px;
+            border-radius:5px ;
+            border : none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div clas="first-step">
+        <h1>Loja Virtual</h1>
+        <hr>
+        <label for="">Nome do Produto</label>
+        <select id ="produto"> 
+            <option value=10.99>Produto A</option>
+            <option value=12.99>Produto B</option>
+            <option value=21.99>Produto C</option>
+            <option value=36.99>Produto D</option>
+            <option value=50.99>Produto E</option>
+        </select>
+        <br><br>
+        <label for="">Quantidade</label>
+        <input type="number" placeholder="Quantidade" id="quantidade">
+        <br><br>
+        <button onclick="validate()">Comprar</button>
+        </div>
+        <div class="final-step">
+            <h2 result.innerHTML = (resultado);>Resultado</h2>
+            $ <p id="resultado" ></p>
+        </div>
+    </div>
+    <script>
+        function validate(){
+            const produto = document.getElementById('produto');
+            const quantidade = document.getElementById('quantidade');
+            produto.style.border = 'none';
+            quantidade.style.border = 'none';
+            if(!produto.value || !quantidade.value){
+                if(!produto.value && !quantidade.value){
+                    produto.style.border = '1px solid red';
+                    quantidade.style.border = '1px solid red';
+                }else if(!produto.value){
+                    produto.style.border = '1px solid red';
+                }else{
+                    quantidade.style.border = '1px solid red';
+                }
+            }
+            else{
+                let resultado = produto.value * quantidade.value;
+                const result = document.getElementById('resultado')
+                console.log(resultado);
+                result.innerHTML='Valor total do produto';
+                result.innerHTML=resultado;
+               
+            }
+            
+        }
+        
+    </script>
+    
+</body>
+</html>
